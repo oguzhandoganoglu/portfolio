@@ -62,14 +62,14 @@ export default function About() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5 mb-12 sm:mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="stat-box group">
-              <span className="text-3xl mb-3 block group-hover:scale-110 transition-transform duration-300">{stat.icon}</span>
-              <div className="text-4xl font-bold text-[var(--fg)] mb-2 font-[family-name:var(--font-display)]">
+              <span className="text-2xl sm:text-3xl mb-2 sm:mb-3 block group-hover:scale-110 transition-transform duration-300">{stat.icon}</span>
+              <div className="text-2xl sm:text-4xl font-bold text-[var(--fg)] mb-1 sm:mb-2 font-[family-name:var(--font-display)]">
                 <CountUp end={stat.value} suffix={stat.suffix} />
               </div>
-              <div className="text-[var(--fg-subtle)] text-sm font-[family-name:var(--font-mono)]">{stat.label}</div>
+              <div className="text-[var(--fg-subtle)] text-xs sm:text-sm font-[family-name:var(--font-mono)]">{stat.label}</div>
             </div>
           ))}
         </div>

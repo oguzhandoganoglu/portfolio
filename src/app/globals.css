@@ -179,14 +179,14 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
+  gap: 0.5rem;
   background: var(--accent);
   color: var(--bg);
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 0.9375rem;
-  padding: 1rem 2rem;
-  border-radius: 14px;
+  font-size: 0.875rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: 12px;
   transition: all 0.4s var(--ease-out-expo);
   border: none;
   cursor: pointer;
@@ -220,14 +220,14 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
+  gap: 0.5rem;
   background: transparent;
   color: var(--fg);
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 0.9375rem;
-  padding: 1rem 2rem;
-  border-radius: 14px;
+  font-size: 0.875rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: 12px;
   border: 1px solid var(--border);
   transition: all 0.4s var(--ease-out-expo);
   cursor: pointer;
@@ -267,14 +267,21 @@ body {
 /* Section Title */
 .section-title {
   font-family: var(--font-display);
-  font-size: 2.75rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
   line-height: 1.1;
 }
 
 @media (min-width: 640px) {
+  .section-title {
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
   .section-title {
     font-size: 3.5rem;
   }
@@ -377,22 +384,22 @@ body {
 /* Glow Effects - Animated */
 .glow-green {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 250px;
+  height: 250px;
   background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(60px);
   pointer-events: none;
   animation: pulse-glow 6s ease-in-out infinite;
 }
 
 .glow-blue {
   position: absolute;
-  width: 450px;
-  height: 450px;
+  width: 200px;
+  height: 200px;
   background: radial-gradient(circle, rgba(0, 212, 255, 0.2) 0%, transparent 70%);
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(60px);
   pointer-events: none;
   animation: pulse-glow 8s ease-in-out infinite;
   animation-delay: 2s;
@@ -400,14 +407,32 @@ body {
 
 .glow-purple {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   background: radial-gradient(circle, rgba(136, 0, 255, 0.15) 0%, transparent 70%);
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(60px);
   pointer-events: none;
   animation: pulse-glow 7s ease-in-out infinite;
   animation-delay: 4s;
+}
+
+@media (min-width: 768px) {
+  .glow-green {
+    width: 500px;
+    height: 500px;
+    filter: blur(80px);
+  }
+  .glow-blue {
+    width: 450px;
+    height: 450px;
+    filter: blur(80px);
+  }
+  .glow-purple {
+    width: 400px;
+    height: 400px;
+    filter: blur(80px);
+  }
 }
 
 /* Cursor Glow - For interactive elements */
@@ -486,13 +511,20 @@ body {
 /* Stat Box - Glassmorphism */
 .stat-box {
   text-align: center;
-  padding: 1.75rem;
+  padding: 1.25rem;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
-  border-radius: 20px;
+  border-radius: 16px;
   transition: all 0.4s var(--ease-out-expo);
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .stat-box {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
 }
 
 .stat-box::before {

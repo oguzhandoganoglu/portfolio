@@ -138,12 +138,12 @@ export default function Projects() {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 font-[family-name:var(--font-display)] ${
+              className={`px-3 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 font-[family-name:var(--font-display)] ${
                 activeCategory === cat
                   ? "bg-[var(--accent)] text-[var(--bg)] shadow-[0_0_20px_var(--accent-glow)]"
                   : "bg-[var(--bg-elevated)] text-[var(--fg-muted)] border border-[var(--border)] hover:border-[var(--accent)] hover:text-[var(--accent)]"
@@ -155,7 +155,7 @@ export default function Projects() {
         </div>
 
         {/* Classic Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {filteredProjects.map((project, index) => (
             <div
               key={project.title}
@@ -167,7 +167,7 @@ export default function Projects() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div
-                className={`relative h-full p-6 rounded-2xl border transition-all duration-300 ${
+                className={`relative h-full p-4 sm:p-6 rounded-xl sm:rounded-2xl border transition-all duration-300 ${
                   hoveredIndex === index
                     ? "bg-[var(--bg-elevated)] border-[var(--accent)] shadow-[0_0_30px_-10px_var(--accent-glow)] -translate-y-1"
                     : "bg-[var(--bg-elevated)]/50 border-[var(--border)] hover:border-[var(--border-hover)]"

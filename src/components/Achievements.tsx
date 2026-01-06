@@ -82,17 +82,17 @@ export default function Achievements() {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               {/* Header */}
-              <div className="flex items-start justify-between mb-4">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
                 <div className="flex items-center gap-3">
-                  <span className="text-3xl">{achievement.icon}</span>
+                  <span className="text-2xl sm:text-3xl">{achievement.icon}</span>
                   <div>
-                    <h3 className="text-lg font-semibold text-white group-hover:text-emerald-500 transition-colors">
+                    <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-emerald-500 transition-colors">
                       {achievement.title}
                     </h3>
-                    <p className="text-blue-400 text-sm">{achievement.subtitle}</p>
+                    <p className="text-blue-400 text-xs sm:text-sm">{achievement.subtitle}</p>
                   </div>
                 </div>
-                <span className={`badge ${achievement.badgeType === "green" ? "badge-green" : "badge-blue"}`}>
+                <span className={`badge shrink-0 ${achievement.badgeType === "green" ? "badge-green" : "badge-blue"}`}>
                   {achievement.highlight}
                 </span>
               </div>

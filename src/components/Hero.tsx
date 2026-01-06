@@ -24,22 +24,22 @@ export default function Hero() {
         </div>
 
         {/* Heading */}
-        <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-8 animate-fade-in stagger-2 tracking-tight font-[family-name:var(--font-display)]" style={{ opacity: 0 }}>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 sm:mb-8 animate-fade-in stagger-2 tracking-tight font-[family-name:var(--font-display)]" style={{ opacity: 0 }}>
           Merhaba, ben{" "}
           <span className="gradient-text-animated">Oğuzhan</span>
         </h1>
 
         {/* Description */}
-        <p className="text-xl md:text-2xl text-[var(--fg-muted)] mb-4 animate-fade-in stagger-3 max-w-3xl mx-auto leading-relaxed" style={{ opacity: 0 }}>
+        <p className="text-lg sm:text-xl md:text-2xl text-[var(--fg-muted)] mb-3 sm:mb-4 animate-fade-in stagger-3 max-w-3xl mx-auto leading-relaxed px-2" style={{ opacity: 0 }}>
           Yapay zeka modelleri geliştiriyor, modern web uygulamaları tasarlıyorum.
         </p>
 
-        <p className="text-[var(--fg-subtle)] mb-12 animate-fade-in stagger-4 font-[family-name:var(--font-mono)] text-sm tracking-wide" style={{ opacity: 0 }}>
+        <p className="text-[var(--fg-subtle)] mb-8 sm:mb-12 animate-fade-in stagger-4 font-[family-name:var(--font-mono)] text-xs sm:text-sm tracking-wide" style={{ opacity: 0 }}>
           TOBB ETÜ Bilgisayar Mühendisliği Mezunu
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-wrap gap-5 justify-center animate-fade-in stagger-5" style={{ opacity: 0 }}>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in stagger-5 px-4" style={{ opacity: 0 }}>
           <MagneticButton strength={0.4}>
             <Link href="#projects" className="btn-primary">
               <span>Projelerimi Gör</span>

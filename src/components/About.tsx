@@ -1,5 +1,8 @@
 "use client";
 
+import CountUp from "./CountUp";
+import Marquee from "./Marquee";
+
 const experience = [
   {
     company: "Marksoft",
@@ -22,10 +25,10 @@ const experience = [
 ];
 
 const stats = [
-  { value: "6+", label: "LLM Modeli", icon: "🧠" },
-  { value: "20+", label: "AI Projesi", icon: "🤖" },
-  { value: "3+", label: "Yıl Deneyim", icon: "💼" },
-  { value: "1", label: "Akademik Yayın", icon: "📄" },
+  { value: 6, suffix: "+", label: "LLM Modeli", icon: "🧠" },
+  { value: 20, suffix: "+", label: "AI Projesi", icon: "🤖" },
+  { value: 3, suffix: "+", label: "Yıl Deneyim", icon: "💼" },
+  { value: 1, suffix: "", label: "Akademik Yayın", icon: "📄" },
 ];
 
 const expertise = [
@@ -59,12 +62,14 @@ export default function About() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-16">
           {stats.map((stat, index) => (
-            <div key={index} className="stat-box">
-              <span className="text-2xl mb-2 block">{stat.icon}</span>
-              <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-zinc-500 text-sm">{stat.label}</div>
+            <div key={index} className="stat-box group">
+              <span className="text-3xl mb-3 block group-hover:scale-110 transition-transform duration-300">{stat.icon}</span>
+              <div className="text-4xl font-bold text-[var(--fg)] mb-2 font-[family-name:var(--font-display)]">
+                <CountUp end={stat.value} suffix={stat.suffix} />
+              </div>
+              <div className="text-[var(--fg-subtle)] text-sm font-[family-name:var(--font-mono)]">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -120,7 +125,7 @@ export default function About() {
 
             {/* Technologies */}
             <div className="card p-5">
-              <h4 className="text-sm font-semibold text-white mb-4">Kullandığım Teknolojiler</h4>
+              <h4 className="text-sm font-semibold text-[var(--fg)] mb-4 font-[family-name:var(--font-display)]">Kullandığım Teknolojiler</h4>
               <div className="flex flex-wrap gap-2">
                 {technologies.map((tech, i) => (
                   <span key={i} className="tag">{tech}</span>
@@ -128,6 +133,14 @@ export default function About() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Technology Marquee */}
+        <div className="mt-16">
+          <Marquee
+            items={[...technologies, "OpenAI", "Anthropic", "CUDA", "Linux", "Git", "REST API"]}
+            speed={40}
+          />
         </div>
       </div>
     </section>

@@ -25,19 +25,20 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "glass py-3" : "bg-transparent py-5"
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        scrolled ? "glass py-4" : "bg-transparent py-6"
       }`}
+      style={{ transitionTimingFunction: 'var(--ease-out-expo)' }}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link
             href="/"
-            className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity"
+            className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity font-[family-name:var(--font-display)]"
           >
-            <span className="gradient-text">oguzhan</span>
-            <span className="text-zinc-500">.dev</span>
+            <span className="gradient-text">oğuzhan</span>
+            <span className="text-[var(--fg-subtle)]">.dev</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -46,7 +47,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="px-4 py-2 text-sm text-zinc-400 hover:text-white rounded-lg hover:bg-white/5 transition-all"
+                  className="px-4 py-2 text-sm text-[var(--fg-muted)] hover:text-[var(--fg)] rounded-xl hover:bg-[var(--accent-dim)] transition-all duration-300 font-[family-name:var(--font-display)] font-medium"
                 >
                   {link.label}
                 </Link>
@@ -56,18 +57,18 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-white/5 transition-colors"
+            className="md:hidden p-2.5 rounded-xl hover:bg-[var(--accent-dim)] transition-colors duration-300"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
             <svg
-              width="24"
-              height="24"
+              width="22"
+              height="22"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
-              className="text-zinc-400"
+              className="text-[var(--fg-muted)]"
             >
               {isOpen ? (
                 <path d="M18 6L6 18M6 6l12 12" />
@@ -80,17 +81,18 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
-            isOpen ? "max-h-80 mt-4" : "max-h-0"
+          className={`md:hidden overflow-hidden transition-all duration-500 ${
+            isOpen ? "max-h-96 mt-4" : "max-h-0"
           }`}
+          style={{ transitionTimingFunction: 'var(--ease-out-expo)' }}
         >
-          <div className="card p-3">
+          <div className="card p-4">
             <ul className="space-y-1">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block px-4 py-3 text-zinc-400 hover:text-white hover:bg-white/5 rounded-lg transition-all"
+                    className="block px-4 py-3 text-[var(--fg-muted)] hover:text-[var(--fg)] hover:bg-[var(--accent-dim)] rounded-xl transition-all duration-300 font-[family-name:var(--font-display)] font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}

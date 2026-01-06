@@ -19,7 +19,7 @@ const projects: Project[] = [
     badge: "Akademik Yayın",
     badgeType: "green",
     description:
-      "LLaMA 3 (8B), Qwen 2 (7B), LLaMA 3.1 (8B) ve Gemma-2 (9B) modellerini Türkçe veri ile fine-tune ettim. 6 model HuggingFace'te yayınlandı. Cere-LLaMA-3-8B, 70B modellerden iyi performans gösterdi.",
+      "LLaMA 3 (8B), Qwen 2 (7B), LLaMA 3.1 (8B) ve Gemma-2 (9B) modellerini Türkçe veri ile fine-tune ettim. 6 model HuggingFace'te yayınlandı. Cere-LLaMA-3-8B, 70B parametreli modellerden daha iyi performans gösterdi.",
     tech: ["LLaMA", "Unsloth", "LLaMA-Factory", "HuggingFace"],
     link: "https://huggingface.co/CerebrumTech",
   },
@@ -29,7 +29,7 @@ const projects: Project[] = [
     badge: "Üretimde",
     badgeType: "green",
     description:
-      "URL veya metinden otomatik podcast oluşturan uygulama. Çoklu konuşmacı, ses seçimi, Türkçe/İngilizce destek. OpenAI + ElevenLabs entegrasyonu. podcast.cereinsight.com adresinde yayında.",
+      "URL veya metinden otomatik podcast oluşturan uygulama. Çoklu konuşmacı, ses seçimi, Türkçe/İngilizce destek. OpenAI + ElevenLabs entegrasyonu.",
     tech: ["Python", "OpenAI", "ElevenLabs", "React"],
     link: "https://podcast.cereinsight.com",
   },
@@ -37,15 +37,8 @@ const projects: Project[] = [
     title: "RAG & LLM Orkestrasyon",
     category: "LLM",
     description:
-      "3.864 PDF'ten otomatik soru-cevap üretimi, embedding ve vektör DB. RouteLLM ile akıllı yönlendirme: basit sorular local LLaMA'ya, zor sorular GPT-4o'ya. Maliyet optimizasyonu sağlandı.",
+      "3.864 PDF'ten otomatik soru-cevap üretimi, embedding ve vektör DB. RouteLLM ile akıllı yönlendirme: basit sorular local LLaMA'ya, zor sorular GPT-4o'ya.",
     tech: ["RAG", "RouteLLM", "Embedding", "Streamlit"],
-  },
-  {
-    title: "Lip-Sync & Avatar",
-    category: "Vision",
-    description:
-      "SyncTalk ile model eğitimi yaparak avatar dudak senkronizasyonu. 4090 GPU sunucuda inference, gerçek zamanlıya yakın performans elde edildi.",
-    tech: ["SyncTalk", "PyTorch", "CUDA", "4090 GPU"],
   },
   {
     title: "Otoyol Plaka Tanıma",
@@ -53,28 +46,35 @@ const projects: Project[] = [
     badge: "%98 Doğruluk",
     badgeType: "blue",
     description:
-      "YOLOv8 ile plaka tespiti (fine-tune), PaddleOCR ve Google OCR karşılaştırması. Base64 API + Docker ile deploy edildi.",
+      "YOLOv8 ile plaka tespiti (fine-tune), PaddleOCR ve Google OCR karşılaştırması. Base64 API + Docker ile production'a deploy edildi.",
     tech: ["YOLOv8", "PaddleOCR", "Docker", "FastAPI"],
+  },
+  {
+    title: "Lip-Sync & Avatar",
+    category: "Vision",
+    description:
+      "SyncTalk ile model eğitimi yaparak avatar dudak senkronizasyonu. 4090 GPU sunucuda inference, gerçek zamanlıya yakın performans.",
+    tech: ["SyncTalk", "PyTorch", "CUDA", "4090 GPU"],
   },
   {
     title: "Virtual Try-On & Face Swap",
     category: "Vision",
     description:
-      "KlingAI API ile kıyafet giydirme, Roop + GFPGAN ile yüz değiştirme kiosk uygulaması. Gerçek zamanlı yüz tespiti, swap ve kalite artırma.",
+      "KlingAI API ile kıyafet giydirme, Roop + GFPGAN ile yüz değiştirme kiosk uygulaması. Gerçek zamanlı yüz tespiti ve kalite artırma.",
     tech: ["KlingAI", "Roop", "GFPGAN", "Computer Vision"],
   },
   {
     title: "TTS & STT Sistemleri",
     category: "Ses",
     description:
-      "Amazon & Google TTS entegrasyonu, Zonos (local açık kaynak TTS), Whisper & WhisperX ile speech-to-text ve konuşmacı ayrımı (diarization).",
+      "Amazon & Google TTS entegrasyonu, Zonos (local açık kaynak TTS), Whisper & WhisperX ile speech-to-text ve konuşmacı ayrımı.",
     tech: ["Whisper", "WhisperX", "Zonos", "Amazon TTS"],
   },
   {
     title: "Call Center AI Asistanı",
     category: "Kurumsal",
     description:
-      "Konuşmaları dinleyip kategorize eden, ilgili birime yönlendiren AI asistan. RAG + Structured Output, Python desktop app (Windows).",
+      "Konuşmaları dinleyip kategorize eden, ilgili birime yönlendiren AI asistan. RAG + Structured Output ile Python desktop uygulaması.",
     tech: ["RAG", "Anthropic", "Python", "Desktop App"],
   },
   {
@@ -94,6 +94,7 @@ const categories = ["Tümü", "LLM", "Vision", "Ses", "Kurumsal", "Full-Stack"];
 export default function Projects() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeCategory, setActiveCategory] = useState("Tümü");
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -127,25 +128,25 @@ export default function Projects() {
       <div className="glow-purple" style={{ top: '20%', right: '-10%' }} />
       <div className="glow-green" style={{ bottom: '10%', left: '-5%' }} />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="section-title">
             <span className="gradient-text">Projeler</span>
           </h2>
-          <p className="text-zinc-400 mt-4">CerebrumTech ve kişisel projelerim</p>
+          <p className="text-[var(--fg-muted)] mt-4 font-[family-name:var(--font-body)]">CerebrumTech ve kişisel projelerim</p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-10">
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 font-[family-name:var(--font-display)] ${
                 activeCategory === cat
-                  ? "bg-emerald-500/20 text-emerald-500 border border-emerald-500/30"
-                  : "bg-white/5 text-zinc-400 border border-white/10 hover:bg-white/10"
+                  ? "bg-[var(--accent)] text-[var(--bg)] shadow-[0_0_20px_var(--accent-glow)]"
+                  : "bg-[var(--bg-elevated)] text-[var(--fg-muted)] border border-[var(--border)] hover:border-[var(--accent)] hover:text-[var(--accent)]"
               }`}
             >
               {cat}
@@ -153,64 +154,86 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* Classic Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project, index) => (
             <div
-              key={index}
-              className={`card p-6 flex flex-col transition-all duration-500 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              key={project.title}
+              className={`group transition-all duration-700 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
               }`}
-              style={{ transitionDelay: `${index * 50}ms` }}
+              style={{ transitionDelay: `${index * 100}ms` }}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* Header */}
-              <div className="flex items-start justify-between gap-2 mb-3">
-                <div>
-                  <span className="text-xs text-zinc-500 uppercase tracking-wider">{project.category}</span>
-                  <h3 className="text-base font-semibold text-white leading-tight mt-1">
+              <div
+                className={`relative h-full p-6 rounded-2xl border transition-all duration-300 ${
+                  hoveredIndex === index
+                    ? "bg-[var(--bg-elevated)] border-[var(--accent)] shadow-[0_0_30px_-10px_var(--accent-glow)] -translate-y-1"
+                    : "bg-[var(--bg-elevated)]/50 border-[var(--border)] hover:border-[var(--border-hover)]"
+                }`}
+              >
+                {/* Content */}
+                <div className="flex flex-col h-full">
+                  {/* Category & Badge */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs text-[var(--fg-subtle)] uppercase tracking-widest font-[family-name:var(--font-mono)]">
+                      {project.category}
+                    </span>
+                    {project.badge && (
+                      <span className={`badge ${project.badgeType === "green" ? "badge-green" : "badge-blue"}`}>
+                        {project.badge}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Title */}
+                  <h3 className={`text-lg font-semibold mb-3 font-[family-name:var(--font-display)] transition-colors duration-300 ${
+                    hoveredIndex === index ? "text-[var(--accent)]" : "text-[var(--fg)]"
+                  }`}>
                     {project.title}
                   </h3>
+
+                  {/* Description */}
+                  <p className="text-[var(--fg-muted)] text-sm leading-relaxed mb-4 flex-grow">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-2.5 py-1 rounded-md text-xs font-[family-name:var(--font-mono)] bg-[var(--bg)] text-[var(--fg-subtle)] border border-[var(--border)]"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Link */}
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-[var(--accent)] hover:underline font-[family-name:var(--font-display)]"
+                    >
+                      <span>Projeyi Gör</span>
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                      >
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                      </svg>
+                    </a>
+                  )}
                 </div>
-                {project.badge && (
-                  <span className={`badge shrink-0 ${project.badgeType === "green" ? "badge-green" : "badge-blue"}`}>
-                    {project.badge}
-                  </span>
-                )}
               </div>
-
-              {/* Description */}
-              <p className="text-zinc-400 text-sm leading-relaxed mb-4 flex-grow">
-                {project.description}
-              </p>
-
-              {/* Tech */}
-              <div className="flex flex-wrap gap-1.5 mb-4">
-                {project.tech.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="px-2 py-1 bg-white/5 text-zinc-500 rounded text-xs"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              {/* Link */}
-              {project.link && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-emerald-500 hover:text-emerald-400 transition-colors text-sm font-medium pt-3 border-t border-white/10"
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
-                  </svg>
-                  Projeyi Gör
-                </a>
-              )}
             </div>
           ))}
         </div>

@@ -35,17 +35,17 @@ export default function Hero() {
 
         {/* Description */}
         <p className="text-xl text-zinc-400 mb-4 animate-fade-in delay-200 max-w-2xl mx-auto">
-          Yapay zeka modelleri gelistiriyor, modern web uygulamalari tasarliyorum.
+          Yapay zeka modelleri geliştiriyor, modern web uygulamaları tasarlıyorum.
         </p>
 
         <p className="text-zinc-500 mb-10 animate-fade-in delay-300">
-          TOBB ETU Bilgisayar Muhendisligi Mezunu
+          TOBB ETÜ Bilgisayar Mühendisliği Mezunu
         </p>
 
         {/* Buttons */}
         <div className="flex flex-wrap gap-4 justify-center animate-fade-in delay-400">
           <Link href="#projects" className="btn-primary">
-            <span>Projelerimi Gor</span>
+            <span>Projelerimi Gör</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
@@ -64,7 +64,7 @@ export default function Hero() {
         {/* Scroll */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in delay-500">
           <div className="flex flex-col items-center gap-2">
-            <span className="text-zinc-600 text-xs uppercase tracking-widest">Kesfet</span>
+            <span className="text-zinc-600 text-xs uppercase tracking-widest">Keşfet</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-zinc-600 animate-bounce">
               <path d="M12 5v14M5 12l7 7 7-7" />
             </svg>

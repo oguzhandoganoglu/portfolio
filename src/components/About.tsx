@@ -5,32 +5,32 @@ const experience = [
     company: "Marksoft",
     role: "Full-Stack Developer",
     period: "2025 - Devam Ediyor",
-    description: "Marka ve patent yonetim yazilimi gelistiriyorum.",
+    description: "Marka ve patent yönetim yazılımı geliştiriyorum.",
   },
   {
     company: "CerebrumTech",
     role: "AI/ML Engineer",
     period: "2024 - 2025",
-    description: "LLM fine-tuning, RAG sistemleri, Computer Vision, TTS/STT ve kurumsal AI cozumleri gelistirdim.",
+    description: "LLM fine-tuning, RAG sistemleri, Computer Vision, TTS/STT ve kurumsal AI çözümleri geliştirdim.",
   },
   {
-    company: "TOBB ETU",
-    role: "Bilgisayar Muhendisligi",
+    company: "TOBB ETÜ",
+    role: "Bilgisayar Mühendisliği",
     period: "2017 - 2024",
-    description: "Lisans egitimimi basariyla tamamladim.",
+    description: "Lisans eğitimimi başarıyla tamamladım.",
   },
 ];
 
 const stats = [
   { value: "6+", label: "LLM Modeli", icon: "🧠" },
   { value: "20+", label: "AI Projesi", icon: "🤖" },
-  { value: "3+", label: "Yil Deneyim", icon: "💼" },
-  { value: "1", label: "Akademik Yayin", icon: "📄" },
+  { value: "3+", label: "Yıl Deneyim", icon: "💼" },
+  { value: "1", label: "Akademik Yayın", icon: "📄" },
 ];
 
 const expertise = [
   { icon: "🧠", title: "LLM & Fine-tuning", desc: "LLaMA, Gemma, Qwen fine-tuning, RAG sistemleri" },
-  { icon: "🎙️", title: "Ses & Konusma", desc: "TTS, STT, Whisper, Lip-sync, AI Podcast" },
+  { icon: "🎙️", title: "Ses & Konuşma", desc: "TTS, STT, Whisper, Lip-sync, AI Podcast" },
   { icon: "👁️", title: "Computer Vision", desc: "YOLOv8, Face Swap, Virtual Try-On, OCR" },
   { icon: "💻", title: "Full-Stack", desc: "React, Next.js, Node.js, Python, Docker" },
 ];
@@ -51,10 +51,10 @@ export default function About() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="section-title">
-            <span className="gradient-text">Hakkimda</span>
+            <span className="gradient-text">Hakkımda</span>
           </h2>
           <p className="text-zinc-400 mt-4 max-w-2xl mx-auto">
-            Yapay zeka, LLM fine-tuning ve full-stack gelistirme alanlarinda uzman bir muhendis
+            Yapay zeka, LLM fine-tuning ve full-stack geliştirme alanlarında uzman bir mühendis
           </p>
         </div>
 
@@ -77,19 +77,19 @@ export default function About() {
             <div className="info-card mb-8">
               <h3 className="text-lg font-semibold text-white mb-4">Ben Kimim?</h3>
               <p className="text-zinc-300 leading-relaxed mb-4">
-                TOBB ETU Bilgisayar Muhendisligi mezunuyum.
+                TOBB ETÜ Bilgisayar Mühendisliği mezunuyum.
                 <span className="text-emerald-500 font-medium"> CerebrumTech</span>&apos;te AI/ML Engineer olarak
-                LLM fine-tuning, RAG sistemleri, Computer Vision ve ses isleme projeleri gelistirdim.
+                LLM fine-tuning, RAG sistemleri, Computer Vision ve ses işleme projeleri geliştirdim.
               </p>
               <p className="text-zinc-400 leading-relaxed">
                 <span className="text-white font-medium">Cere-LLaMA-3-8B</span> modelim akademik benchmark&apos;larda
-                70B parametreli modellerden iyi performans gosterdi. Simdi
-                <span className="text-emerald-500 font-medium"> Marksoft</span>&apos;ta Full-Stack Developer olarak calismaya devam ediyorum.
+                70B parametreli modellerden iyi performans gösterdi. Şimdi
+                <span className="text-emerald-500 font-medium"> Marksoft</span>&apos;ta Full-Stack Developer olarak çalışmaya devam ediyorum.
               </p>
             </div>
 
             {/* Expertise */}
-            <h3 className="text-lg font-semibold text-white mb-4">Uzmanlik Alanlari</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">Uzmanlık Alanları</h3>
             <div className="grid grid-cols-2 gap-3">
               {expertise.map((item, index) => (
                 <div key={index} className="card p-4">
@@ -120,7 +120,7 @@ export default function About() {
 
             {/* Technologies */}
             <div className="card p-5">
-              <h4 className="text-sm font-semibold text-white mb-4">Kullandigim Teknolojiler</h4>
+              <h4 className="text-sm font-semibold text-white mb-4">Kullandığım Teknolojiler</h4>
               <div className="flex flex-wrap gap-2">
                 {technologies.map((tech, i) => (
                   <span key={i} className="tag">{tech}</span>

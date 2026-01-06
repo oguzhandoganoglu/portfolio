@@ -14,22 +14,22 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Turkce LLM Fine-tuning",
+    title: "Türkçe LLM Fine-tuning",
     category: "LLM",
-    badge: "Akademik Yayin",
+    badge: "Akademik Yayın",
     badgeType: "green",
     description:
-      "LLaMA 3 (8B), Qwen 2 (7B), LLaMA 3.1 (8B) ve Gemma-2 (9B) modellerini Turkce veri ile fine-tune ettim. 6 model HuggingFace'te yayinlandi. Cere-LLaMA-3-8B, 70B modellerden iyi performans gosterdi.",
+      "LLaMA 3 (8B), Qwen 2 (7B), LLaMA 3.1 (8B) ve Gemma-2 (9B) modellerini Türkçe veri ile fine-tune ettim. 6 model HuggingFace'te yayınlandı. Cere-LLaMA-3-8B, 70B modellerden iyi performans gösterdi.",
     tech: ["LLaMA", "Unsloth", "LLaMA-Factory", "HuggingFace"],
     link: "https://huggingface.co/CerebrumTech",
   },
   {
-    title: "AI Podcast Uygulamasi",
+    title: "AI Podcast Uygulaması",
     category: "Ses",
-    badge: "Uretimde",
+    badge: "Üretimde",
     badgeType: "green",
     description:
-      "URL veya metinden otomatik podcast olusturan uygulama. Coklu konusmaci, ses secimi, Turkce/Ingilizce destek. OpenAI + ElevenLabs entegrasyonu. podcast.cereinsight.com adresinde yayinda.",
+      "URL veya metinden otomatik podcast oluşturan uygulama. Çoklu konuşmacı, ses seçimi, Türkçe/İngilizce destek. OpenAI + ElevenLabs entegrasyonu. podcast.cereinsight.com adresinde yayında.",
     tech: ["Python", "OpenAI", "ElevenLabs", "React"],
     link: "https://podcast.cereinsight.com",
   },
@@ -37,44 +37,44 @@ const projects: Project[] = [
     title: "RAG & LLM Orkestrasyon",
     category: "LLM",
     description:
-      "3.864 PDF'ten otomatik soru-cevap uretimi, embedding ve vektor DB. RouteLLM ile akilli yonlendirme: basit sorular local LLaMA'ya, zor sorular GPT-4o'ya. Maliyet optimizasyonu saglandi.",
+      "3.864 PDF'ten otomatik soru-cevap üretimi, embedding ve vektör DB. RouteLLM ile akıllı yönlendirme: basit sorular local LLaMA'ya, zor sorular GPT-4o'ya. Maliyet optimizasyonu sağlandı.",
     tech: ["RAG", "RouteLLM", "Embedding", "Streamlit"],
   },
   {
     title: "Lip-Sync & Avatar",
     category: "Vision",
     description:
-      "SyncTalk ile model egitimi yaparak avatar dudak senkronizasyonu. 4090 GPU sunucuda inference, gercek zamanlia yakin performans elde edildi.",
+      "SyncTalk ile model eğitimi yaparak avatar dudak senkronizasyonu. 4090 GPU sunucuda inference, gerçek zamanlıya yakın performans elde edildi.",
     tech: ["SyncTalk", "PyTorch", "CUDA", "4090 GPU"],
   },
   {
-    title: "Otoyol Plaka Tanima",
+    title: "Otoyol Plaka Tanıma",
     category: "Vision",
-    badge: "%98 Dogruluk",
+    badge: "%98 Doğruluk",
     badgeType: "blue",
     description:
-      "YOLOv8 ile plaka tespiti (fine-tune), PaddleOCR ve Google OCR karsilastirmasi. Base64 API + Docker ile deploy edildi.",
+      "YOLOv8 ile plaka tespiti (fine-tune), PaddleOCR ve Google OCR karşılaştırması. Base64 API + Docker ile deploy edildi.",
     tech: ["YOLOv8", "PaddleOCR", "Docker", "FastAPI"],
   },
   {
     title: "Virtual Try-On & Face Swap",
     category: "Vision",
     description:
-      "KlingAI API ile kiyafet giydirme, Roop + GFPGAN ile yuz degistirme kiosk uygulamasi. Gercek zamanli yuz tespiti, swap ve kalite artirma.",
+      "KlingAI API ile kıyafet giydirme, Roop + GFPGAN ile yüz değiştirme kiosk uygulaması. Gerçek zamanlı yüz tespiti, swap ve kalite artırma.",
     tech: ["KlingAI", "Roop", "GFPGAN", "Computer Vision"],
   },
   {
     title: "TTS & STT Sistemleri",
     category: "Ses",
     description:
-      "Amazon & Google TTS entegrasyonu, Zonos (local acik kaynak TTS), Whisper & WhisperX ile speech-to-text ve konusmaci ayirimi (diarization).",
+      "Amazon & Google TTS entegrasyonu, Zonos (local açık kaynak TTS), Whisper & WhisperX ile speech-to-text ve konuşmacı ayrımı (diarization).",
     tech: ["Whisper", "WhisperX", "Zonos", "Amazon TTS"],
   },
   {
-    title: "Call Center AI Asistani",
+    title: "Call Center AI Asistanı",
     category: "Kurumsal",
     description:
-      "Konusmalari dinleyip kategorize eden, ilgili birime yonlendiren AI asistan. RAG + Structured Output, Python desktop app (Windows).",
+      "Konuşmaları dinleyip kategorize eden, ilgili birime yönlendiren AI asistan. RAG + Structured Output, Python desktop app (Windows).",
     tech: ["RAG", "Anthropic", "Python", "Desktop App"],
   },
   {
@@ -83,17 +83,17 @@ const projects: Project[] = [
     badge: "Aktif",
     badgeType: "green",
     description:
-      "Marka ve patent yonetimi icin kurumsal yazilim. Fikri mulkiyet haklarinin takibi, arastirmasi ve izlenmesi icin kapsamli web uygulamasi.",
+      "Marka ve patent yönetimi için kurumsal yazılım. Fikri mülkiyet haklarının takibi, araştırması ve izlenmesi için kapsamlı web uygulaması.",
     tech: ["React", "Next.js", "Node.js", "PostgreSQL"],
     link: "https://www.marksoft.com.tr",
   },
 ];
 
-const categories = ["Tumu", "LLM", "Vision", "Ses", "Kurumsal", "Full-Stack"];
+const categories = ["Tümü", "LLM", "Vision", "Ses", "Kurumsal", "Full-Stack"];
 
 export default function Projects() {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeCategory, setActiveCategory] = useState("Tumu");
+  const [activeCategory, setActiveCategory] = useState("Tümü");
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -113,7 +113,7 @@ export default function Projects() {
     return () => observer.disconnect();
   }, []);
 
-  const filteredProjects = activeCategory === "Tumu"
+  const filteredProjects = activeCategory === "Tümü"
     ? projects
     : projects.filter(p => p.category === activeCategory);
 
@@ -133,7 +133,7 @@ export default function Projects() {
           <h2 className="section-title">
             <span className="gradient-text">Projeler</span>
           </h2>
-          <p className="text-zinc-400 mt-4">CerebrumTech ve kisisel projelerim</p>
+          <p className="text-zinc-400 mt-4">CerebrumTech ve kişisel projelerim</p>
         </div>
 
         {/* Category Filter */}
@@ -208,7 +208,7 @@ export default function Projects() {
                     <polyline points="15 3 21 3 21 9" />
                     <line x1="10" y1="14" x2="21" y2="3" />
                   </svg>
-                  Projeyi Gor
+                  Projeyi Gör
                 </a>
               )}
             </div>

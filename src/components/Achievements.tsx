@@ -5,10 +5,10 @@ import { useEffect, useRef, useState } from "react";
 const achievements = [
   {
     icon: "📄",
-    title: "Akademik Yayin",
+    title: "Akademik Yayın",
     subtitle: "arXiv:2508.16431 - Cetvel Benchmark",
     description:
-      "Gelistirdigim Cere-LLaMA-3-8B modeli, Cetvel benchmark calismasinda 70B parametreli Llama-3.3-Instruct modelini GEC ve Turk tarihi QA gorevlerinde gecerek exceptional performance sergiledi.",
+      "Geliştirdiğim Cere-LLaMA-3-8B modeli, Cetvel benchmark çalışmasında 70B parametreli Llama-3.3-Instruct modelini GEC ve Türk tarihi QA görevlerinde geçerek exceptional performance sergiledi.",
     link: "https://arxiv.org/abs/2508.16431",
     highlight: "8B > 70B",
     badgeType: "green",
@@ -18,7 +18,7 @@ const achievements = [
     title: "HuggingFace Modelleri",
     subtitle: "CerebrumTech Organization",
     description:
-      "Turkce dil modelleri HuggingFace'te yayinlandi ve topluluk tarafindan aktif olarak kullaniliyor. LLaMA ve Gemma tabanli modeller Turkce NLP ekosisteminde onemli bir kaynak haline geldi.",
+      "Türkçe dil modelleri HuggingFace'te yayınlandı ve topluluk tarafından aktif olarak kullanılıyor. LLaMA ve Gemma tabanlı modeller Türkçe NLP ekosisteminde önemli bir kaynak haline geldi.",
     link: "https://huggingface.co/CerebrumTech",
     highlight: "6 Model",
     badgeType: "blue",
@@ -63,9 +63,9 @@ export default function Achievements() {
           }`}
         >
           <h2 className="section-title">
-            <span className="gradient-text">Basarilar</span>
+            <span className="gradient-text">Başarılar</span>
           </h2>
-          <p className="text-zinc-500">Akademik yayinlar ve yayinlanan modeller</p>
+          <p className="text-zinc-500">Akademik yayınlar ve yayınlanan modeller</p>
         </div>
 
         {/* Achievements Grid */}
@@ -104,7 +104,7 @@ export default function Achievements() {
 
               {/* Link indicator */}
               <div className="flex items-center gap-2 text-zinc-500 text-sm group-hover:text-emerald-500 transition-colors">
-                <span>Detaylari gor</span>
+                <span>Detayları gör</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="transform group-hover:translate-x-1 transition-transform">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>

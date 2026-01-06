@@ -8,13 +8,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Oğuzhan Doğanoğlu | Bilgisayar Mühendisi",
-  description: "Bilgisayar Mühendisi | Full-Stack Developer | AI/ML Enthusiast | Blockchain Developer",
-  keywords: ["Oğuzhan Doğanoğlu", "Bilgisayar Mühendisi", "Full-Stack Developer", "AI", "ML", "Blockchain"],
+  title: "Oğuzhan Doğanoğlu | AI/ML Engineer & Full-Stack Developer",
+  description: "AI/ML Engineer | Full-Stack Developer | LLM Fine-tuning | Computer Vision | RAG Sistemleri",
+  keywords: ["Oğuzhan Doğanoğlu", "AI Engineer", "ML Engineer", "Full-Stack Developer", "LLM", "Fine-tuning", "RAG"],
   authors: [{ name: "Oğuzhan Doğanoğlu" }],
   openGraph: {
-    title: "Oğuzhan Doğanoğlu | Bilgisayar Mühendisi",
-    description: "Bilgisayar Mühendisi | Full-Stack Developer | AI/ML Enthusiast",
+    title: "Oğuzhan Doğanoğlu | AI/ML Engineer & Full-Stack Developer",
+    description: "AI/ML Engineer | Full-Stack Developer | LLM Fine-tuning | Computer Vision",
     type: "website",
   },
 };

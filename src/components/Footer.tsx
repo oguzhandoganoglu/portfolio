@@ -6,7 +6,7 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Oguzhan Doganoglu
         </p>
         <p className="text-zinc-700 text-sm">
-          Next.js & Tailwind CSS ile yapildi
+          Next.js & Tailwind CSS ile yapıldı
         </p>
       </div>
     </footer>

@@ -10,7 +10,7 @@ const skillCategories = [
   },
   {
     icon: "🎙️",
-    title: "Ses & Konusma",
+    title: "Ses & Konuşma",
     skills: ["Whisper", "WhisperX", "ElevenLabs", "Zonos", "Amazon TTS", "Diarization"],
   },
   {
@@ -25,7 +25,7 @@ const skillCategories = [
   },
   {
     icon: "🛠️",
-    title: "DevOps & Araclar",
+    title: "DevOps & Araçlar",
     skills: ["Docker", "Git", "CUDA", "Linux", "HuggingFace", "REST API"],
   },
   {
@@ -75,7 +75,7 @@ export default function Skills() {
           <h2 className="section-title">
             <span className="gradient-text">Yetenekler</span>
           </h2>
-          <p className="text-zinc-500">Uzmanlas tigim teknolojiler ve araclar</p>
+          <p className="text-zinc-500">Uzmanlaştığım teknolojiler ve araçlar</p>
         </div>
 
         {/* Skills Grid */}

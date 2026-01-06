@@ -74,11 +74,11 @@ export default function Contact() {
           }`}
         >
           <h2 className="section-title">
-            <span className="gradient-text">Iletisim</span>
+            <span className="gradient-text">İletişim</span>
           </h2>
           <p className="text-zinc-400 max-w-lg mx-auto">
-            Yeni projeler, is birlikleri veya sadece merhaba demek icin benimle
-            iletisime gecebilirsiniz.
+            Yeni projeler, iş birlikleri veya sadece merhaba demek için benimle
+            iletişime geçebilirsiniz.
           </p>
         </div>
 
@@ -88,9 +88,9 @@ export default function Contact() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h3 className="text-xl font-semibold text-white mb-3">Gorusme Planlayin</h3>
+          <h3 className="text-xl font-semibold text-white mb-3">Görüşme Planlayın</h3>
           <p className="text-zinc-400 mb-6">
-            Projeleriniz, danismanlik veya is birligi icin 30 dakikalik ucretsiz gorusme ayarlayin.
+            Projeleriniz, danışmanlık veya iş birliği için 30 dakikalık ücretsiz görüşme ayarlayın.
           </p>
           <Link href="/randevu" className="btn-primary">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -110,7 +110,7 @@ export default function Contact() {
           }`}
         >
           <div className="flex-1 h-px bg-white/10" />
-          <span className="text-zinc-600 text-sm">veya sosyal medyadan ulasin</span>
+          <span className="text-zinc-600 text-sm">veya sosyal medyadan ulaşın</span>
           <div className="flex-1 h-px bg-white/10" />
         </div>
 
@@ -141,7 +141,7 @@ export default function Contact() {
           }`}
         >
           <p className="text-zinc-500 text-sm">
-            veya dogrudan mail gonder:{" "}
+            veya doğrudan mail gönderin:{" "}
             <a href="mailto:oguzhandoganoglu@gmail.com" className="text-emerald-500 hover:underline">
               oguzhandoganoglu@gmail.com
             </a>

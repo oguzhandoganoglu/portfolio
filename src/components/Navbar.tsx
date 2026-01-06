@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const navLinks = [
-  { href: "#about", label: "Hakkimda" },
-  { href: "#achievements", label: "Basarilar" },
+  { href: "#about", label: "Hakkımda" },
+  { href: "#achievements", label: "Başarılar" },
   { href: "#skills", label: "Yetenekler" },
   { href: "#projects", label: "Projeler" },
-  { href: "#contact", label: "Iletisim" },
+  { href: "#contact", label: "İletişim" },
 ];
 
 export default function Navbar() {

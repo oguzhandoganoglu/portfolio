@@ -50,7 +50,7 @@ export default function Randevu() {
               <span className="gradient-text">Randevu Al</span>
             </h1>
             <p className="text-zinc-400">
-              Projeleriniz, is birlikleri veya danismanlik icin gorusme ayarlayin.
+              Projeleriniz, iş birlikleri veya danışmanlık için görüşme ayarlayın.
             </p>
           </div>
 
